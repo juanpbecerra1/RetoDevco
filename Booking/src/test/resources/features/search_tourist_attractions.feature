@@ -9,4 +9,4 @@ Feature: Search Tourist Attractions
     When he enters the tourist attractions data
       | country | destination | date              | numberTickets | name  | lastName | mail                       | phoneNumber |
       | Londres | Cruise      | 10-September-2021 | 1             | Pedro | Perez    | devco-automation@gmail.com | 3112224589  |
-    Then he will be able to see the label "Review and payment"
+    Then he will be able to see the Payment in screen

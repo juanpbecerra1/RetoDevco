@@ -11,8 +11,7 @@ import java.util.List;
 public class RegisterAccountStepDefinitions {
     @When("he enters the register data")
     public void heEntersTheRegisterData(List<UserAccount> userAccount) {
-        OnStage.theActorInTheSpotlight().attemptsTo(RegisterNew.account(userAccount.get(0)));
-
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                RegisterNew.account(userAccount.get(0)));
     }
-
 }

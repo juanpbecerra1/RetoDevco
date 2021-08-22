@@ -1,6 +1,6 @@
 package co.com.devco.certification.booking.models;
 
-import co.com.devco.certification.booking.utils.enums.Translate;
+import co.com.devco.certification.booking.utils.enums.Translates;
 
 public class ToursAttractionsData {
     private String destination;
@@ -28,8 +28,8 @@ public class ToursAttractionsData {
     }
 
     public String getDestination() {
-        destination = destination.replace(" ","_").toUpperCase();
-        return Translate.valueOf(destination).toSpanish();
+        destination = destination.replace(" ", "_").toUpperCase();
+        return Translates.valueOf(destination).toSpanish();
     }
 
     public String getDate() {

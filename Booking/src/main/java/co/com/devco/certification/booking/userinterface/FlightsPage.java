@@ -20,7 +20,4 @@ public class FlightsPage extends PageObject {
             .locatedBy("//div[contains(@class,'return-input')]");
     public static final Target BTN_SEARCH = Target.the("Button search")
             .locatedBy("//button[contains(@id,'submit')]");
-
-
-
 }

@@ -9,6 +9,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -23,16 +24,15 @@ public class Login implements Task {
         return instrumented(Login.class, userAccount);
     }
 
-
+    @Step("{0} login with credentials")
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(HomePage.BTN_LOGIN),
                 Enter.theValue(userAccount.getMail()).into(LoginPage.INPUT_MAIL),
                 Click.on(LoginPage.BUTTON_CONTINUE_WITH_EMAIL),
-               WaitUntil.the(LoginPage.INPUT_PASSWORD, WebElementStateMatchers.isVisible())
-                       .forNoMoreThan(5).seconds(),
+                WaitUntil.the(LoginPage.INPUT_PASSWORD, WebElementStateMatchers.isVisible())
+                        .forNoMoreThan(5).seconds(),
                 Enter.theValue(userAccount.getPassword()).into(LoginPage.INPUT_PASSWORD),
                 Click.on(LoginPage.BUTTON_LOGIN));
-
     }
 }

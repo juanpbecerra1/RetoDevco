@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.thucydides.core.annotations.Step;
 
 public class FindFlights implements Task {
     private final TravelData travelData;
@@ -19,6 +20,7 @@ public class FindFlights implements Task {
         return Tasks.instrumented(FindFlights.class, travelData);
     }
 
+    @Step("{0} find flights")
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(FlightsPage.OPEN_ORIGIN),

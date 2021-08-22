@@ -8,10 +8,10 @@ import co.com.devco.certification.booking.userinterface.ToursAttractionsPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.actions.*;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.openqa.selenium.Keys;
+import net.thucydides.core.annotations.Step;
 
 public class SearchTours implements Task {
     private final ToursAttractionsData toursAttractionsData;
@@ -24,6 +24,7 @@ public class SearchTours implements Task {
         return Tasks.instrumented(SearchTours.class, toursAttractionsData);
     }
 
+    @Step("{0} search tours attractions")
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(ToursAttractionsPage.COUNTRY_DESTINATION.of(toursAttractionsData.getCountry())),
@@ -36,6 +37,5 @@ public class SearchTours implements Task {
                 WaitUntil.the(ToursAttractionsPage.LABEL_NUMBER_PASSENGERS, WebElementStateMatchers.isVisible()).forNoMoreThan(5).seconds(),
                 SelectNumber.ofTickets(toursAttractionsData.getNumberTickets()),
                 EnterData.ofUser(toursAttractionsData));
-
     }
 }

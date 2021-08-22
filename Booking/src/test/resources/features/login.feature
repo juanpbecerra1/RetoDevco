@@ -8,4 +8,4 @@ Feature: Login in the Booking
     When he enters the login data
       | mail                       | password       |
       | devco-automation@gmail.com | Booking-147963 |
-    Then he will be able to see the option "Your account"
+    Then he will be able to see the option Tu cuenta

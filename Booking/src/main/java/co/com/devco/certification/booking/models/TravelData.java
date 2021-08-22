@@ -1,7 +1,5 @@
 package co.com.devco.certification.booking.models;
 
-import co.com.devco.certification.booking.utils.enums.Moths;
-
 public class TravelData {
     private String origin;
     private String destinationPlace;

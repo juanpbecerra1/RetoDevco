@@ -11,4 +11,6 @@ public class DataTourAttractionsPage extends PageObject {
     public static final Target INPUT_EMAIL_CONFIRM = Target.the("input email confirm").located(By.name("emailConfirm"));
     public static final Target INPUT_PHONE = Target.the("input phone").located(By.name("phone"));
     public static final Target BUTTON_NEXT = Target.the("button next").located(By.xpath("//button[@type='submit']"));
+    public static final Target LOADER = Target.the("loader")
+            .located(By.xpath("//p[text()='Un momento, estamos preparando tu selección']"));
 }

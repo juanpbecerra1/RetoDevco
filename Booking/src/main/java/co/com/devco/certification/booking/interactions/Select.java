@@ -13,24 +13,21 @@ public class Select implements Interaction {
     private String date;
     private Target next;
 
-
     public Select(String date, Target next) {
         this.date = date;
         this.next = next;
     }
 
+    public static Select date(String date, Target next) {
+        return Tasks.instrumented(Select.class, date, next);
+    }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        while(!Text.of(HomePage.CALENDAR_MOTH_YEAR)
-                .viewedBy(actor).asString().equals(ConvertDate.getMothYear(date))){
-          actor.attemptsTo(Click.on(next));
+        while (!Text.of(HomePage.CALENDAR_MOTH_YEAR)
+                .viewedBy(actor).asString().equals(ConvertDate.getMothYear(date))) {
+            actor.attemptsTo(Click.on(next));
         }
         actor.attemptsTo(Click.on(HomePage.CALENDAR_DAY.of(ConvertDate.getDay(date))));
-
-    }
-
-    public static Select date(String date, Target next){
-        return Tasks.instrumented(Select.class, date, next);
     }
 }

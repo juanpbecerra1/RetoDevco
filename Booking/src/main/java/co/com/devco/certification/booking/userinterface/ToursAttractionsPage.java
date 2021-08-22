@@ -17,7 +17,7 @@ public class ToursAttractionsPage extends PageObject {
     public static final Target BTN_NEXT = Target.the("button next")
             .locatedBy("//button[contains(@class,'Calendar-module__control--next')]");
     public static final Target BTN_SEARCH = Target.the("button search")
-            .locatedBy("//button[@type='submit']") ;
+            .locatedBy("//button[@type='submit']");
     public static final Target LABEL_NUMBER_PASSENGERS = Target.the("label number of passengers")
             .locatedBy("(//div[contains(@class,'Text-module__root--variant-strong_2')])[2]");
     public static final Target ADD_PASSENGER = Target.the("add  passenger")

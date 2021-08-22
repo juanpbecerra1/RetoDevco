@@ -9,6 +9,6 @@ Feature: Create Account
     When he enters the register data
       | mail                        | password       |
       | devco-automation1@gmail.com | Booking-147963 |
-    Then he will be able to see the option "Your account"
+    Then he will be able to see the option Tu cuenta
 
 

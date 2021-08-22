@@ -12,5 +12,4 @@ public class RegisterAccountPage extends PageObject {
     public static final Target INPUT_CONFIRMED_PASSWORD = Target.the("input confirmed password").located(By.id("confirmed_password"));
     public static final Target BUTTON_CREATE_NEW_ACCOUNT = Target.the("button create new account")
             .locatedBy("//button[@class='bui-button bui-button--large bui-button--wide']");
-
 }

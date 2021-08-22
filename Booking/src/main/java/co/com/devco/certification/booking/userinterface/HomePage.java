@@ -24,5 +24,6 @@ public class HomePage extends PageObject {
             .locatedBy("//span[contains(text(),'Vuelos')]");
     public static final Target OPTION_TOURS_ATTRACTIONS = Target.the("option tour attractions")
             .locatedBy("//a[@data-decider-header='attractions']");
-
+    public static final Target LABEL_ACCOMMODATIONS = Target.the("label accommodations mayor to 30 days")
+            .locatedBy("(//div[@class='fe_banner__message '])[2]");
 }
