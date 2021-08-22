@@ -21,8 +21,8 @@ public class SearchAccommodation implements Task{
         actor.attemptsTo(
                 Enter.theValue(travelData.getDestinationPlace()).into(HomePage.INPUT_ACCOMMODATION),
                 Click.on(HomePage.CALENDAR),
-                Select.date(travelData.getArrivalDate()),
-                Select.date(travelData.getDepartureDate()),
+                Select.date(travelData.getArrivalDate(), HomePage.CALENDAR_NEXT_MOTH),
+                Select.date(travelData.getDepartureDate(), HomePage.CALENDAR_NEXT_MOTH),
                 Click.on(HomePage.BTN_SEARCH)
                 );
 

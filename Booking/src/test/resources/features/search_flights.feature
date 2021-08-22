@@ -7,7 +7,7 @@ Feature: Search Flights
   Scenario: Search Flights
     Given the user is on the flights page
     When enters the data to fly
-      | origin   | destinationPlace | arrivalDate       | departureDate     |
-      | Medellin | Miami            | 10-September-2021 | 15-September-2021 |
-  Then he will be able to see the button "View deal"
+      | origin   | destinationPlace | arrivalDate | departureDate |
+      | Bogota | Miami            | 10/09/2021  | 15/09/2021    |
+    Then he will be able to see the button "View deal"
 
